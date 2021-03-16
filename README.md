@@ -1,0 +1,2 @@
+# plugin-hide-courses-blackboard
+ 
