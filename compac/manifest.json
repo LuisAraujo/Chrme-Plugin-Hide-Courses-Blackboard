@@ -1,0 +1,42 @@
+{
+
+    "manifest_version": 2,
+    "name": "Hide Courses Blackboard",
+    "version": "1.0",
+
+
+    "description": "Esconda dos cursos de semestres anteriores",
+
+
+    "icons": {
+       "48": "icon48.png",
+       "128": "icon128.png"
+    },
+
+
+    "page_action": {
+        "default_icon": {
+            "19" : "icon19.png"
+        },
+        "default_title": "Hide Courses Blackboard"
+    },
+
+
+    "permissions": [
+        "declarativeContent"
+    ],
+
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+
+
+    "content_scripts": [ {
+        "js": [ "inject/jquery.js", "inject/hidebb.js" ],
+        "matches": [ "https://unifacs.blackboard.com/*" ]
+    } ]
+
+
+}
